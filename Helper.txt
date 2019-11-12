@@ -1,0 +1,5 @@
+In order to run the solver you must do this.
+
+1- Create a folder named js after downloading the repository and put all of .js files there
+2- Create a folder named obj and create a folder inside of obj named Debug, put the following files there:   Project8.njsprojAssemblyReference.cache , Project8.njsproj.FileListAbsolute.txt
+3- Finally create a folder named bin and put these archives there: Microsoft.NodejsTools.WebRole.dll
