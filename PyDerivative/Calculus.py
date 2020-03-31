@@ -17,11 +17,10 @@ class Calculus(object):
         return state
 
     def __find_symbol_x(self, chain_of_str):
-        valid_string = "0123456789x"
+        valid_characters = "0123456789x"
         state = True
-        str.lower(chain_of_str)
-        for char in chain_of_str:
-            if (char in valid_string):
+        for char in chain_of_str.lower():
+            if char in valid_characters:
                 state = True
             else:
                 state = False
