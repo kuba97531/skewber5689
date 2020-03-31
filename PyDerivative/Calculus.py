@@ -5,27 +5,19 @@ class Calculus(object):
         self.equation = equation
 
     def __validator(self):
-        state = True
         calculus_valid_characters = "0123456789x^+-*/()."
-
         for char in self.equation.lower():
-            if char in calculus_valid_characters:
-                state = True
-            else:
-                state = False
-                break
-        return state
+            if char not in calculus_valid_characters:
+                return False
+        return True
+
 
     def __find_symbol_x(self, chain_of_str):
         valid_characters = "0123456789x"
-        state = True
         for char in chain_of_str.lower():
-            if char in valid_characters:
-                state = True
-            else:
-                state = False
-                break
-        return state
+            if char not in valid_characters:
+                return False
+        return True
     
     def separate_equation(self):
         return re.split("([+-])", self.equation.replace(" ", ""))
