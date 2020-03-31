@@ -6,10 +6,10 @@ class Calculus(object):
 
     def __validator(self):
         state = True
-        Calculus_Valid_String = "0123456789x^+-*/()."
+        calculus_valid_characters = "0123456789x^+-*/()."
         str.lower(self.equation)
         for char in self.equation:
-            if (char in Calculus_Valid_String):
+            if (char in calculus_valid_characters):
                 state = True
             else:
                 state = False
