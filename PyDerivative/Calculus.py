@@ -86,6 +86,6 @@ class Calculus(object):
     #     equation_list = self.separate_equation()
 
 equation = input("Enter your equation >>> ")
-Calculus = Calculus(equation)
-# print(Calculus.separate_equation())
-print(Calculus.product_rule())
+calculus = Calculus(equation)
+# print(calculus.separate_equation())
+print(calculus.product_rule())
