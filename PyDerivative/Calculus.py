@@ -28,7 +28,7 @@ class Calculus(object):
         derivative_sign = []
         pre_derivative_equation = []
         final_result = []
-        equation_list = self.separate_equation();
+        equation_list = self.separate_equation()
         for item in equation_list:
             if ((item != "+") & (item != "-") & (item != None)):
                 hasX = self.__find_symbol_x(item)
@@ -49,7 +49,7 @@ class Calculus(object):
             else:
                 final = str(str(main_num) + "x^" + str(exp))
                 pre_derivative_equation.append(final)
-        sign_pos = 0;
+        sign_pos = 0
         for item in pre_derivative_equation:
             if (sign_pos < len(derivative_sign)):
                 sign = str(derivative_sign[sign_pos])
