@@ -9,7 +9,7 @@ class Calculus(object):
         calculus_valid_characters = "0123456789x^+-*/()."
         str.lower(self.equation)
         for char in self.equation:
-            if (char in calculus_valid_characters):
+            if char in calculus_valid_characters:
                 state = True
             else:
                 state = False
