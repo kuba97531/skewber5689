@@ -7,8 +7,8 @@ class Calculus(object):
     def __validator(self):
         state = True
         calculus_valid_characters = "0123456789x^+-*/()."
-        str.lower(self.equation)
-        for char in self.equation:
+
+        for char in self.equation.lower():
             if char in calculus_valid_characters:
                 state = True
             else:
