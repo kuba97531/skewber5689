@@ -32,7 +32,7 @@ class Calculus(object):
         for item in equation_list:
             if (item != "+") and (item != "-") and (item != None):
                 hasX = self.__find_symbol_x(item)
-                if hasX == True:
+                if hasX:
                     derivative_equation.append([str(item), "^", "1"])
                 else:
                     derivative_equation.append(re.split("(['^'])", item.replace(" ", "")))
@@ -70,7 +70,7 @@ class Calculus(object):
         for item in equation_list:
             if (item != "*") and (item != None):
                 hasX = self.__find_symbol_x(item)
-                if hasX == True:
+                if hasX:
                     derivative_equation.append([str(item), "^", "1"])
                 else:
                     derivative_equation.append(re.split("(['^'])", item.replace(" ", "")))
