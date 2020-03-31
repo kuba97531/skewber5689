@@ -30,9 +30,9 @@ class Calculus(object):
         final_result = []
         equation_list = self.separate_equation()
         for item in equation_list:
-            if ((item != "+") & (item != "-") & (item != None)):
+            if (item != "+") and (item != "-") and (item != None):
                 hasX = self.__find_symbol_x(item)
-                if (hasX == True):
+                if hasX == True:
                     derivative_equation.append([str(item), "^", "1"])
                 else:
                     derivative_equation.append(re.split("(['^'])", item.replace(" ", "")))
@@ -43,7 +43,7 @@ class Calculus(object):
             main_num = float(re.split("(['x'])", item[0])[0])
             main_num = main_num * float(exp)
             exp = exp - 1
-            if (exp == 1):
+            if exp == 1:
                 final = str(str(main_num) + "x")
                 pre_derivative_equation.append(final)
             else:
@@ -51,7 +51,7 @@ class Calculus(object):
                 pre_derivative_equation.append(final)
         sign_pos = 0
         for item in pre_derivative_equation:
-            if (sign_pos < len(derivative_sign)):
+            if sign_pos < len(derivative_sign):
                 sign = str(derivative_sign[sign_pos])
                 sign_pos = sign_pos + 1
             else:
@@ -68,9 +68,9 @@ class Calculus(object):
         equation_list = self.separate_equation_product_rule()
         
         for item in equation_list:
-            if ((item != "*") & (item != None)):
+            if (item != "*") and (item != None):
                 hasX = self.__find_symbol_x(item)
-                if (hasX == True):
+                if hasX == True:
                     derivative_equation.append([str(item), "^", "1"])
                 else:
                     derivative_equation.append(re.split("(['^'])", item.replace(" ", "")))
